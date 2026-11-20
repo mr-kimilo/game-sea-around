@@ -1,0 +1,26 @@
+{
+  "_comment": "20 关，难度平滑递增：鱼数量/速度/重量上限缓慢上涨，大鱼上限比例与出现频率逐关小幅提升，每关解锁一种新鱼",
+  "levels": [
+    { "name": "第1关",  "fishCount": 12, "fishSpeed": [30, 80],  "fishWeightRange": [1, 8],  "maxBigFishRatio": 0.15, "bigFishInterval": 5,    "targetWeight": 15, "dashCooldown": 3,   "stealthCooldown": 6,   "stealthDuration": 2 },
+    { "name": "第2关",  "fishCount": 13, "fishSpeed": [32, 83],  "fishWeightRange": [1, 9],  "maxBigFishRatio": 0.16, "bigFishInterval": 4.85, "targetWeight": 16, "dashCooldown": 3,   "stealthCooldown": 6.1, "stealthDuration": 2 },
+    { "name": "第3关",  "fishCount": 15, "fishSpeed": [34, 86],  "fishWeightRange": [1, 11], "maxBigFishRatio": 0.18, "bigFishInterval": 4.65, "targetWeight": 17, "dashCooldown": 3.1, "stealthCooldown": 6.3, "stealthDuration": 1.95 },
+    { "name": "第4关",  "fishCount": 16, "fishSpeed": [36, 89],  "fishWeightRange": [1, 12], "maxBigFishRatio": 0.19, "bigFishInterval": 4.5,  "targetWeight": 18, "dashCooldown": 3.1, "stealthCooldown": 6.4, "stealthDuration": 1.95 },
+    { "name": "第5关",  "fishCount": 17, "fishSpeed": [38, 93],  "fishWeightRange": [1, 14], "maxBigFishRatio": 0.21, "bigFishInterval": 4.3,  "targetWeight": 20, "dashCooldown": 3.1, "stealthCooldown": 6.5, "stealthDuration": 1.9 },
+    { "name": "第6关",  "fishCount": 19, "fishSpeed": [41, 96],  "fishWeightRange": [1, 15], "maxBigFishRatio": 0.22, "bigFishInterval": 4.15, "targetWeight": 21, "dashCooldown": 3.2, "stealthCooldown": 6.7, "stealthDuration": 1.9 },
+    { "name": "第7关",  "fishCount": 20, "fishSpeed": [43, 99],  "fishWeightRange": [1, 17], "maxBigFishRatio": 0.24, "bigFishInterval": 4,    "targetWeight": 22, "dashCooldown": 3.2, "stealthCooldown": 6.8, "stealthDuration": 1.85 },
+    { "name": "第8关",  "fishCount": 21, "fishSpeed": [45, 102], "fishWeightRange": [1, 18], "maxBigFishRatio": 0.25, "bigFishInterval": 3.8,  "targetWeight": 23, "dashCooldown": 3.2, "stealthCooldown": 6.9, "stealthDuration": 1.85 },
+    { "name": "第9关",  "fishCount": 23, "fishSpeed": [47, 105], "fishWeightRange": [1, 20], "maxBigFishRatio": 0.26, "bigFishInterval": 3.65, "targetWeight": 25, "dashCooldown": 3.2, "stealthCooldown": 7.1, "stealthDuration": 1.8 },
+    { "name": "第10关", "fishCount": 24, "fishSpeed": [49, 108], "fishWeightRange": [1, 21], "maxBigFishRatio": 0.28, "bigFishInterval": 3.5,  "targetWeight": 26, "dashCooldown": 3.3, "stealthCooldown": 7.2, "stealthDuration": 1.8 },
+    { "name": "第11关", "fishCount": 25, "fishSpeed": [51, 112], "fishWeightRange": [1, 23], "maxBigFishRatio": 0.29, "bigFishInterval": 3.3,  "targetWeight": 27, "dashCooldown": 3.3, "stealthCooldown": 7.3, "stealthDuration": 1.75 },
+    { "name": "第12关", "fishCount": 26, "fishSpeed": [53, 115], "fishWeightRange": [1, 24], "maxBigFishRatio": 0.31, "bigFishInterval": 3.15, "targetWeight": 28, "dashCooldown": 3.3, "stealthCooldown": 7.5, "stealthDuration": 1.75 },
+    { "name": "第13关", "fishCount": 28, "fishSpeed": [55, 118], "fishWeightRange": [1, 26], "maxBigFishRatio": 0.32, "bigFishInterval": 3,    "targetWeight": 30, "dashCooldown": 3.3, "stealthCooldown": 7.6, "stealthDuration": 1.7 },
+    { "name": "第14关", "fishCount": 29, "fishSpeed": [57, 121], "fishWeightRange": [1, 27], "maxBigFishRatio": 0.34, "bigFishInterval": 2.8,  "targetWeight": 31, "dashCooldown": 3.4, "stealthCooldown": 7.7, "stealthDuration": 1.7 },
+    { "name": "第15关", "fishCount": 30, "fishSpeed": [59, 124], "fishWeightRange": [1, 29], "maxBigFishRatio": 0.35, "bigFishInterval": 2.65, "targetWeight": 32, "dashCooldown": 3.4, "stealthCooldown": 7.8, "stealthDuration": 1.65 },
+    { "name": "第16关", "fishCount": 32, "fishSpeed": [62, 127], "fishWeightRange": [1, 30], "maxBigFishRatio": 0.36, "bigFishInterval": 2.45, "targetWeight": 33, "dashCooldown": 3.4, "stealthCooldown": 8,   "stealthDuration": 1.65 },
+    { "name": "第17关", "fishCount": 33, "fishSpeed": [64, 131], "fishWeightRange": [1, 32], "maxBigFishRatio": 0.38, "bigFishInterval": 2.3,  "targetWeight": 34, "dashCooldown": 3.4, "stealthCooldown": 8.1, "stealthDuration": 1.6 },
+    { "name": "第18关", "fishCount": 34, "fishSpeed": [66, 134], "fishWeightRange": [1, 33], "maxBigFishRatio": 0.39, "bigFishInterval": 2.15, "targetWeight": 36, "dashCooldown": 3.5, "stealthCooldown": 8.2, "stealthDuration": 1.6 },
+    { "name": "第19关", "fishCount": 36, "fishSpeed": [68, 137], "fishWeightRange": [1, 35], "maxBigFishRatio": 0.41, "bigFishInterval": 2,    "targetWeight": 37, "dashCooldown": 3.5, "stealthCooldown": 8.4, "stealthDuration": 1.55 },
+    { "name": "第20关", "fishCount": 37, "fishSpeed": [70, 140], "fishWeightRange": [1, 36], "maxBigFishRatio": 0.42, "bigFishInterval": 1.8,  "targetWeight": 38, "dashCooldown": 3.5, "stealthCooldown": 8.5, "stealthDuration": 1.5 }
+  ]
+}
+

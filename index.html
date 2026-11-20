@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>海底吃吃乐</title>
+  <link rel="icon" href="data:,">
+  <style>
+    /* #game 永远等于视口大小（fixed + inset:0）：Phaser FIT 的基准就是视口，
+       画布不会被撑得比视口大 → 顶部（标题、HUD）不会被切掉且无法滚动回来 */
+    html, body { margin: 0; padding: 0; width: 100%; height: 100%; background: #02101f; overflow: hidden; }
+    body { touch-action: none; -webkit-tap-highlight-color: transparent; }
+    #game { position: fixed; left: 0; top: 0; right: 0; bottom: 0; width: 100% !important; height: 100% !important; overflow: hidden; }
+    #game canvas { display: block; }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/phaser@3.80.1/dist/phaser.min.js"></script>
+</head>
+<body>
+  <div id="game"></div>
+  <script src="js/i18n.js?v=11"></script>
+  <script src="js/textures.js?v=11"></script>
+  <script src="js/audio.js?v=11"></script>
+  <script src="js/scenes/MenuScene.js?v=11"></script>
+  <script src="js/scenes/GameScene.js?v=11"></script>
+  <script src="js/scenes/EndScene.js?v=11"></script>
+  <script src="js/scenes/VictoryScene.js?v=11"></script>
+  <script src="js/main.js?v=11"></script>
+
+  <!-- 返回游戏大厅（portal）：本地 → localhost:5200；线上 game-xxx.szfm.top → game.szfm.top -->
+  <a id="back-lobby" href="#" title="返回游戏大厅" aria-label="返回游戏大厅" style="position:fixed;left:16px;bottom:16px;width:44px;height:44px;display:grid;place-items:center;border-radius:50%;background:rgba(15,23,42,.55);backdrop-filter:blur(6px);border:1px solid rgba(148,163,184,.35);font-size:20px;text-decoration:none;opacity:.5;transition:opacity .2s,transform .2s;z-index:9999" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=.5">🏠</a>
+  <script>
+    (() => {
+      const h = location.hostname;
+      const isLocal = h === 'localhost' || h === '127.0.0.1';
+      const root = h.split('.').slice(-2).join('.');
+      document.getElementById('back-lobby').href = isLocal ? 'http://localhost:5200/' : `${location.protocol}//game.${root}/`;
+    })();
+  </script>
+</body>
+</html>
