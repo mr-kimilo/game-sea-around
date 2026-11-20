@@ -135,7 +135,7 @@ npx --yes serve -l 8080 .        # Node.js，首次运行会自动下载 serve
 
 纯静态站点，把仓库根目录直接托管到任意静态服务（Nginx、OSS / COS、Vercel、Netlify、GitHub Pages）即可，无需构建步骤。
 
-仓库自带 GitHub Pages 工作流 [`.github/workflows/deploy-pages.yml`](.github/workflows/deploy-pages.yml)：推送到 `main` 后自动发布。首次使用需在 **Settings → Pages → Source** 选择 **GitHub Actions**。
+仓库自带 GitHub Pages 工作流 [`.github/workflows/deploy-pages.yml`](.github/workflows/deploy-pages.yml)：推送到 `main` 后自动发布。首次使用需在 **Settings → Pages → Source** 选择 **GitHub Actions**；未启用时工作流会跳过部署（只留一条提示），不会让仓库出现失败记录。
 
 > `index.html` 左下角的「返回大厅」按钮面向带了游戏大厅站点的部署：本地指向 `http://localhost:5200/`，线上按当前域名拼出 `game.<主域>/`。独立部署时删掉该 `<a>` 与随后的内联脚本即可。
 

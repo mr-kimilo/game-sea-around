@@ -24,14 +24,30 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      # Pages 未启用时安静跳过，避免仓库里出现无意义的失败记录
+      - name: Check Pages availability
+        id: pages
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh api "repos/${GITHUB_REPOSITORY}/pages" > /dev/null 2>&1; then
+            echo "enabled=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "enabled=false" >> "$GITHUB_OUTPUT"
+            echo "::notice title=Pages 未启用::请在 Settings → Pages → Source 选择 \"GitHub Actions\"，然后重新运行本工作流。"
+          fi
+
       - name: Configure Pages
+        if: steps.pages.outputs.enabled == 'true'
         uses: actions/configure-pages@v5
 
       - name: Upload site artifact
+        if: steps.pages.outputs.enabled == 'true'
         uses: actions/upload-pages-artifact@v3
         with:
           path: .
 
       - name: Deploy to GitHub Pages
         id: deployment
+        if: steps.pages.outputs.enabled == 'true'
         uses: actions/deploy-pages@v4
